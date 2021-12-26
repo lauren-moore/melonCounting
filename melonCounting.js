@@ -1,6 +1,8 @@
 
 //Our customers are going to buy lots of melons!
 
+'use strict';
+
 const melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
                  'Sharlyn', 'Xigua', 'Ogen', 'Christmas', 'Christmas',
                  'Christmas', 'Christmas', 'Watermelon', 'Sharlyn', 'Xigua',
@@ -9,18 +11,18 @@ const melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
                  'Santa Claus', 'Horned Melon', 'Watermelon', 'Ogen',
                  'Horned Melon', 'Cantaloupe', 'Xigua', 'Horned Melon', 'Sharlyn',
                  'Horned Melon', 'Sharlyn', 'Cantaloupe', 'Christmas',
-                 'Horned Melon', 'Horned Melon', 'Horned Melon', 'Xigua', 'Xigua',
+                 'Horned Melon', 'Horned Melon','Horned Melon', 'Xigua', 'Xigua',
                  'Watermelon', 'Cantaloupe', 'Casaba', 'Cantaloupe', 'Casaba',
-                 'Watermelon', 'Santa Claus', 'Casaba']
+                 'Watermelon', 'Santa Claus', 'Casaba'];
 
 
-countMelons = (melonList) => {
+countMelons = (melonArray) => {
     //Take in a list and return a dictionary of # of melons by melon type.
 
     const melonCounts = {};
 
 
-    for (const melon of melonList) {
+    for (const melon of melonArray) {
         if (melon in melonCounts) {
             melonCounts[melon] = melonCounts[melon] + 1;
         } else {
